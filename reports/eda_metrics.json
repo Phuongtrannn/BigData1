@@ -1,0 +1,39 @@
+{
+    "dataset_name": "RetailRocket Recommender System Dataset",
+    "total_records": 2756101,
+    "unique_users": 1407580,
+    "unique_items": 235061,
+    "min_date": "2015-05-03 03:00:04.384000",
+    "max_date": "2015-09-18 02:59:47.788000",
+    "event_counts": {
+        "view": {
+            "count": 2664312,
+            "percent": 96.67
+        },
+        "addtocart": {
+            "count": 69332,
+            "percent": 2.52
+        },
+        "transaction": {
+            "count": 22457,
+            "percent": 0.81
+        }
+    },
+    "conversion_rates": {
+        "view_to_cart_percent": 2.6,
+        "cart_to_transaction_percent": 32.39,
+        "overall_conversion_percent": 0.84
+    },
+    "user_activity": {
+        "mean_interactions": 1.96,
+        "median_interactions": 1.0,
+        "max_interactions": 7757,
+        "pct_users_single_interaction": 71.15,
+        "pct_users_ge_3_interactions": 14.21
+    },
+    "item_activity": {
+        "mean_interactions": 11.73,
+        "median_interactions": 3.0,
+        "max_interactions": 3412
+    }
+}
