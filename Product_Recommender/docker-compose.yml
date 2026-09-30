@@ -1,0 +1,8 @@
+# File cấu hình Hadoop/Spark cluster bằng Docker Compose
+# Nhóm sẽ bổ sung cấu hình image tại đây
+version: '3'
+services:
+  # spark-master:
+  # spark-worker:
+  # hadoop-namenode:
+  # hadoop-datanode:

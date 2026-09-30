@@ -1,0 +1,15 @@
+# Ignore data and models
+data/raw/*
+data/processed/*
+models/*
+
+# Ignore python caches and environments
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+
+# Ignore OS files
+.DS_Store

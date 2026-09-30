@@ -1,0 +1,7 @@
+[theme]
+# Phong cách Minimalist (Tối giản, Sang trọng) theo chuẩn UI/UX
+primaryColor = "#1B1B1B"          # Đen xám đậm (cho các nút nhấn)
+backgroundColor = "#FAFAF8"       # Trắng kem / Warm monochrome (giảm chói mắt)
+secondaryBackgroundColor = "#F2F2EF" # Xám kem nhạt (cho sidebar và block)
+textColor = "#2C2C2C"             # Xám than (dễ đọc hơn đen tuyền)
+font = "sans serif"               # Font gọn gàng

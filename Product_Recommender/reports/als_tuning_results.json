@@ -1,0 +1,58 @@
+{
+    "dataset": "RetailRocket Recommender System Dataset",
+    "total_interactions": 2145179,
+    "train_records": 1716287,
+    "test_records": 428892,
+    "best_config": {
+        "model_name": "Mô hình 3 (Optimal)",
+        "rank": 10,
+        "regParam": 0.1,
+        "alpha": 20.0,
+        "maxIter": 10,
+        "rmse": 2.5304,
+        "mae": 1.5551,
+        "training_time_sec": 90.28
+    },
+    "all_models": [
+        {
+            "model_name": "Mô hình 1 (Base)",
+            "rank": 5,
+            "regParam": 0.01,
+            "alpha": 1.0,
+            "maxIter": 10,
+            "rmse": 2.568,
+            "mae": 1.6016,
+            "training_time_sec": 56.68
+        },
+        {
+            "model_name": "Mô hình 2 (Tuned α)",
+            "rank": 10,
+            "regParam": 0.05,
+            "alpha": 10.0,
+            "maxIter": 10,
+            "rmse": 2.5433,
+            "mae": 1.5723,
+            "training_time_sec": 73.89
+        },
+        {
+            "model_name": "Mô hình 3 (Optimal)",
+            "rank": 10,
+            "regParam": 0.1,
+            "alpha": 20.0,
+            "maxIter": 10,
+            "rmse": 2.5304,
+            "mae": 1.5551,
+            "training_time_sec": 90.28
+        },
+        {
+            "model_name": "Mô hình 4 (Deep Factor)",
+            "rank": 20,
+            "regParam": 0.1,
+            "alpha": 40.0,
+            "maxIter": 10,
+            "rmse": 2.5512,
+            "mae": 1.5684,
+            "training_time_sec": 138.45
+        }
+    ]
+}

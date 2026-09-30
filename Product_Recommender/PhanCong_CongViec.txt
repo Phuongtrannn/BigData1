@@ -1,0 +1,146 @@
+KẾ HOẠCH TRIỂN KHAI VÀ PHÂN CÔNG ĐỒ ÁN (NHÓM 4 NGƯỜI)
+MÔN HỌC: NHẬP MÔN BIG DATA (HUIT)
+ĐỀ TÀI: HỆ KHUYẾN NGHỊ SẢN PHẨM CHO SÀN THƯƠNG MẠI ĐIỆN TỬ
+DATASET: RetailRocket Recommender System Dataset
+
+======================================================================
+PHẦN 1: TỔNG QUAN YÊU CẦU THEO RUBRIC (10 ĐIỂM)
+1. Lưu trữ và xử lý dữ liệu (20%): Dùng hệ thống file phân tán Hadoop HDFS và Apache Spark RDD/DataFrame.
+2. Mô hình/công nghệ xử lý (25%): Áp dụng thuật toán Lọc cộng tác (Collaborative Filtering).
+3. Trực quan hóa/Xây dựng ứng dụng (25%): Biểu đồ EDA và Giao diện Web (Streamlit).
+4. Tính ứng dụng (10%): Giải quyết bài toán E-commerce (Implicit Feedback, Cold Start).
+5. Trình bày & Phối hợp (20%): Báo cáo chuẩn 2 giai đoạn (Lý thuyết 30%, Cuối kỳ 70%).
+
+======================================================================
+PHẦN 2: PHÂN CÔNG CÔNG VIỆC CHUẨN RUBRIC (4 THÀNH VIÊN)
+🧑‍💻 Thành viên 1: Trưởng nhóm / Kỹ sư dữ liệu (Target: 20% điểm)
+- Thiết lập Cluster, Hệ thống file phân tán DFS.
+- Tiền xử lý dữ liệu (ETL) bằng Spark RDD và Spark DataFrame.
+- Xây dựng Data Pipeline hoàn chỉnh.
+
+📊 Thành viên 2: Chuyên viên Phân tích (Target: 30% điểm Báo cáo GĐ 1)
+- Trực quan hóa dữ liệu (EDA): Vẽ biểu đồ phân bố giờ mua, view/cart.
+- Phụ trách chính "Báo cáo cơ sở lý thuyết" (Giai đoạn 1).
+- Xây dựng kịch bản báo cáo Business Insights.
+
+🧠 Thành viên 3: Kỹ sư Học máy (Target: 25% điểm Mô hình xử lý)
+- Code thuật toán Lọc cộng tác (ALS của Spark MLlib).
+- Đánh giá RMSE, tinh chỉnh tham số (Hyperparameter tuning) trên cụm Big Data.
+
+🖥️ Thành viên 4: Kỹ sư Giao diện (Target: 25% điểm Ứng dụng + 10% Trình bày)
+- Code Ứng dụng Demo (Streamlit/Gradio) hiển thị sản phẩm gợi ý.
+- Xử lý logic khởi đầu lạnh (Cold-start).
+- Phụ trách viết "Báo cáo đồ án hoàn chỉnh" (Giai đoạn 2) và Slide.
+
+======================================================================
+PHẦN 3: LỘ TRÌNH TRIỂN KHAI VÀ BÁO CÁO TIẾN ĐỘ (8 TUẦN)
+
+## Tuần 1: Khởi động và khảo sát dữ liệu
+*Mục tiêu:* Thống nhất hướng triển khai, công nghệ và tìm hiểu bộ dữ liệu sử dụng cho hệ thống.
+*Công việc thực hiện:*
+- Phân tích yêu cầu môn học, tiêu chí đánh giá đồ án và chuẩn bị môi trường làm việc (đề xuất công cụ Hadoop HDFS và Apache Spark).
+- Khảo sát bộ dữ liệu RetailRocket, tìm hiểu ý nghĩa các trường thông tin và xác định các chỉ số cần phân tích EDA.
+- Nghiên cứu cơ sở lý thuyết: bài toán hệ khuyến nghị, thuật toán Collaborative Filtering (đặc biệt là nguyên lý ALS) và yêu cầu dữ liệu đầu vào.
+- Đề xuất phương pháp quy đổi hành vi người dùng (view/cart/buy) thành điểm tương tác.
+- Khảo sát các chức năng cần có của hệ thống demo, tìm hiểu thư viện Streamlit và thiết kế luồng sử dụng của người dùng.
+*Kết quả cần đạt:*
+- Thống nhất bộ dữ liệu sử dụng và công nghệ triển khai.
+- Hoàn thành sơ đồ kiến trúc tổng thể ban đầu.
+- Hoàn thành kế hoạch phân công và tiến độ nhóm.
+
+## Tuần 2: Xây dựng cơ sở lý thuyết và thiết kế hệ thống
+*Mục tiêu:* Hoàn thiện nội dung cơ sở lý thuyết và thiết kế hướng triển khai hệ thống.
+*Công việc thực hiện:*
+- Xây dựng sơ đồ luồng lưu trữ và xử lý dữ liệu với hệ thống Hadoop HDFS, RDD và DataFrame trên Apache Spark.
+- Viết cơ sở lý thuyết tổng quan về Thương mại điện tử, Hệ khuyến nghị và phân tích hành vi người dùng.
+- Viết cơ sở lý thuyết chuyên sâu về Collaborative Filtering, mô hình Matrix Factorization (ALS), các tham số và phương pháp đánh giá (RMSE).
+- Thiết kế giao diện web dự kiến trên Streamlit, lên sơ đồ luồng hoạt động của chức năng khuyến nghị và hướng giải quyết vấn đề Cold Start.
+*Kết quả cần đạt:*
+- Hoàn thành đề cương báo cáo giai đoạn 1.
+- Hoàn thành cơ sở lý thuyết theo từng nội dung.
+- Hoàn thành bản thiết kế kiến trúc hệ thống.
+
+## Tuần 3: Xây dựng hạ tầng và tiền xử lý dữ liệu
+*Mục tiêu:* Đưa dữ liệu vào môi trường xử lý Big Data và xây dựng quy trình tiền xử lý.
+*Công việc thực hiện:*
+- Thiết lập môi trường Hadoop HDFS và Apache Spark, đưa các file dữ liệu RetailRocket lên hệ thống lưu trữ.
+- Đọc và tiền xử lý dữ liệu bằng Spark RDD/DataFrame (ETL ban đầu).
+- Kiểm tra cấu trúc, chất lượng dữ liệu: thống kê bản ghi, phân tích dữ liệu thiếu/không hợp lệ và xác định các chỉ số phục vụ trực quan hóa.
+- Xây dựng bảng tương tác người dùng – sản phẩm, quy đổi các loại hành vi thành điểm tương tác cho mô hình ALS.
+- Khởi tạo project Streamlit, dựng giao diện khung ban đầu để chuẩn bị cấu trúc tích hợp mô hình sau này.
+*Kết quả cần đạt:*
+- Hệ thống lưu trữ và xử lý dữ liệu được thiết lập.
+- Dữ liệu được đọc và tiền xử lý bằng Spark.
+- Hoàn thành dữ liệu đầu vào sơ bộ cho mô hình ALS.
+- Hoàn thành giao diện web khung.
+
+## Tuần 4: Phân tích dữ liệu và hoàn thành báo cáo giai đoạn 1
+*Mục tiêu:* Hoàn thành phần phân tích dữ liệu và báo cáo cơ sở lý thuyết.
+*Công việc thực hiện:*
+- Kiểm tra quy trình ETL và việc lưu trữ dữ liệu trên Hadoop HDFS trên toàn bộ dữ liệu. Tổng hợp kết quả xử lý.
+- Thực hiện phân tích EDA: vẽ biểu đồ phân bố các loại hành vi, phân tích hành vi người dùng theo thời gian và thống kê lượt xem/thêm giỏ hàng/giao dịch.
+- Hoàn thiện phương pháp xây dựng điểm tương tác, chuẩn bị tập dữ liệu mẫu để thử nghiệm mô hình ALS.
+- Hoàn thiện bản thiết kế giao diện demo và chuẩn bị các chức năng cơ bản của web.
+- Tổng hợp hình ảnh, biểu đồ và hoàn thiện nội dung báo cáo giai đoạn 1.
+*Kết quả cần đạt:*
+- Hoàn thành các biểu đồ EDA.
+- Hoàn thành dữ liệu đầu vào cho mô hình.
+- Hoàn thành báo cáo cơ sở lý thuyết giai đoạn 1 và nộp theo yêu cầu giảng viên.
+
+## Tuần 5: Xây dựng mô hình ALS và phát triển giao diện
+*Mục tiêu:* Xây dựng bản thử nghiệm mô hình khuyến nghị và giao diện web.
+*Công việc thực hiện:*
+- Chuẩn bị dữ liệu đầu vào trên môi trường Spark, theo dõi tài nguyên và thời gian xử lý.
+- Hoàn thiện các phân tích dữ liệu còn thiếu, tổng hợp kết quả EDA vào báo cáo và giải thích đặc điểm dữ liệu.
+- Xây dựng và huấn luyện mô hình ALS (bằng Spark MLlib) trên tập dữ liệu mẫu. Thử nghiệm các tham số (rank, maxIter, regParam) và đánh giá ban đầu bằng RMSE.
+- Tạo chức năng nhập mã người dùng và hiển thị danh sách sản phẩm gợi ý trên giao diện web Streamlit. Chuẩn bị chức năng xử lý người dùng mới.
+*Kết quả cần đạt:*
+- Mô hình ALS bản thử nghiệm hoạt động, có kết quả đánh giá ban đầu.
+- Giao diện web có thể chạy độc lập (nhập mã và hiển thị kết quả mẫu).
+
+## Tuần 6: Huấn luyện mô hình trên dữ liệu lớn và tối ưu
+*Mục tiêu:* Huấn luyện mô hình trên dữ liệu thực tế và hoàn thiện phương pháp khuyến nghị.
+*Công việc thực hiện:*
+- Đưa toàn bộ dữ liệu đã tiền xử lý vào quy trình huấn luyện trên Spark. Theo dõi và xử lý các lỗi liên quan đến dữ liệu/môi trường.
+- Huấn luyện mô hình ALS trên bộ dữ liệu thực tế. Đánh giá bằng RMSE, điều chỉnh tham số tối ưu và so sánh kết quả giữa các cấu hình.
+- Phân tích kết quả sau khi huấn luyện, vẽ biểu đồ thống kê, nhận xét dữ liệu và giải thích hành vi người dùng dựa trên mô hình.
+- Hoàn thiện chức năng Cold Start (gợi ý sản phẩm phổ biến) và chuẩn bị giao diện kết nối với mô hình ALS.
+*Kết quả cần đạt:*
+- Hoàn thành huấn luyện mô hình trên dữ liệu lớn và có kết quả đánh giá.
+- Hoàn thành phương pháp xử lý Cold Start.
+- Hoàn thành giao diện sẵn sàng tích hợp.
+
+## Tuần 7: Tích hợp hệ thống và kiểm thử
+*Mục tiêu:* Kết nối các thành phần thành một hệ thống khuyến nghị hoàn chỉnh.
+*Công việc thực hiện:*
+- Kiểm tra toàn bộ quy trình luân chuyển dữ liệu từ Hadoop HDFS đến Spark. Phối hợp xử lý lỗi trong quá trình tích hợp.
+- Kết nối mô hình ALS vào giao diện Streamlit: xây dựng chức năng lấy danh sách sản phẩm gợi ý dựa trên mã người dùng.
+- Kiểm tra tính hợp lý của kết quả khuyến nghị, phân tích các case-study cụ thể để đưa vào báo cáo đánh giá.
+- Kiểm thử toàn bộ luồng hoạt động của web: xử lý người dùng cũ, người dùng mới (Cold Start). Sửa lỗi giao diện và lỗi tích hợp.
+*Kết quả cần đạt:*
+- Hệ thống chạy thông suốt từ dữ liệu đến kết quả khuyến nghị.
+- Giao diện web hiển thị chính xác sản phẩm đề xuất.
+- Hoàn thành kiểm thử, ghi nhận và sửa các lỗi phát sinh.
+
+## Tuần 8: Hoàn thiện báo cáo, slide và trình diễn
+*Mục tiêu:* Hoàn thiện sản phẩm, tài liệu và chuẩn bị bảo vệ đồ án.
+*Công việc thực hiện:*
+- Hoàn thiện chương Lưu trữ và xử lý dữ liệu lớn (tổng hợp kết quả Hadoop HDFS, Spark RDD/DataFrame).
+- Hoàn thiện chương Tổng quan và Phân tích dữ liệu (tổng hợp biểu đồ EDA, nhận xét và kết luận).
+- Hoàn thiện chương Thuật toán ALS (kết quả huấn luyện, đánh giá mô hình, thực nghiệm).
+- Hoàn thiện chương Xây dựng ứng dụng demo (hình ảnh giao diện, kết quả chạy thử).
+- Hoàn thiện Slide PowerPoint, kịch bản trình diễn hệ thống và chuẩn bị câu hỏi phản biện kỹ thuật.
+- Kiểm tra tính thống nhất giữa Code, Báo cáo và Slide. Diễn tập thuyết trình toàn nhóm.
+*Kết quả cần đạt:*
+- Hoàn thành báo cáo đồ án cuối kỳ và slide thuyết trình.
+- Hoàn thiện hệ thống demo.
+- Sẵn sàng nộp và bảo vệ đồ án.
+
+======================================================================
+PHẦN 4: CẤU TRÚC BÁO CÁO CUỐI KỲ (CẬP NHẬT THEO ĐỀ CƯƠNG)
+CHƯƠNG 1: TỔNG QUAN (Vấn đề TMĐT, RetailRocket Dataset).
+CHƯƠNG 2: KỸ THUẬT LƯU TRỮ (Cấu trúc Cluster, Hadoop HDFS).
+CHƯƠNG 3: XỬ LÝ DỮ LIỆU LỚN VỚI APACHE SPARK (Tiền xử lý với RDD/DataFrame).
+CHƯƠNG 4: KỸ THUẬT LỌC CỘNG TÁC (Collaborative Filtering - Áp dụng thuật toán ALS).
+CHƯƠNG 5: TRỰC QUAN HÓA VÀ XÂY DỰNG ỨNG DỤNG DEMO (Biểu đồ & Giao diện).
+CHƯƠNG 6: TỔNG KẾT.
